@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Shibam Ghosh</h2>
+
+    <p>
+      Hi, I'm Shibam Ghosh.<br />To know more about me click the button below !!
+    </p>
+    <div id="demo"></div>
+
+    <button type="button" onclick="about()">Know more ...</button>
+
+    <script>
+      function about() {
+        const xhttp = new XMLHttpRequest();
+
+        xhttp.onload = function () {
+          document.getElementById("demo").innerHTML = this.responseText;
+        };
+        xhttp.open("GET", "more.txt");
+        xhttp.send();
+      }
+
+      function loadDoc() {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function () {
+          document.getElementById("demo").innerHTML = this.responseText;
+        };
+        xhttp.open("GET", "ajax_info.txt");
+        xhttp.send();
+      }
+    </script>
+  </body>
+</html>

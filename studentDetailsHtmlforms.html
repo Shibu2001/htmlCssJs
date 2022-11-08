@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>student details</title>
+</head>
+<body>
+  <h1>student details</h1>
+  <form>
+    <label for="fname">FIRST NAME:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+
+    <label for="lname">LAST NAME:</label>
+    <input type="text" id="lname" name="lname"><br><br>
+    GENDER :<br>
+
+    <div id="gndr">
+      <input type="radio" id="g1" name="rate" value="Male"> Male
+      <input type="radio" id="g2" name="rate" value="Female"> Female
+      <input type="radio" id="g3" name="rate" value="Transgender" checked="checked"> Transgender  
+    </div>
+
+   <label for="bldgrp">BLOOD GROUP :</label><br>
+     <select id="bldgrp" name="bldgrp">
+      <option value="a+">A+</option>
+      <option value="a-">A-</option>
+      <option value="b+">B+</option>
+      <option value="b-">B-</option>
+      <option value="ab+">AB+</option>
+      <option value="ab-">AB-</option>
+      <option value="o+">O+</option>
+      <option value="o-">O-</option>
+    </select>
+    <br><br>
+    
+     
+    <input type="button" value="click me" onclick="test()">
+
+  </form>
+  <p id="t1">Hello Test</p>
+</body>
+<script>
+  
+  function test()
+   {
+    if(document.getElementById('g1').checked)
+      var gdr="Male";
+    else if(document.getElementById('g2').checked)
+    var gdr="Female";
+    else
+    gdr="Transgender";
+    
+    var s=document.getElementById("fname").value+"  "+ document.getElementById("lname").value+" Gender:"+ gdr +"Blood Group:"+document.getElementById("bldgrp").value;
+     document.getElementById("t1").innerHTML = s;
+     
+
+    }
+</script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>student etails</title>
+</head>
+<body>
+  <h1>Student details</h1>
+  <form action="wikipedia.com" target="_self" method="get">
+   
+      Input Section:<br>
+
+      <input type="text" id="Inp1"><br>
+      <input type="text" id="Inp2"><br>
+      <input type="text" id="Inp3"><br>
+      <input type="text" id="Inp4" ><br>
+      
+      
+      <input type="submit" value="Submit">
+      
+    <input type="button" value="click me" onclick="test()"><br>
+    <input type="submit" value="Submit">
+    Output Section:<br>
+    <input type="text" id="Out1"><br>
+        
+      
+
+    </form>
+    
+    
+
+</body>
+<script>
+  
+  function test()
+   {
+   var str=document.getElementById("Inp1").value;
+   var st= document.getElementById("Inp2").value;
+   var len=document.getElementById("Inp3").value;
+
+   var output=str.lastIndexOf(st);
+   
+   
+   document.getElementById("Out1").value=output;
+       alert("Thank you");
+   
+     }
+</script>
+</html>
